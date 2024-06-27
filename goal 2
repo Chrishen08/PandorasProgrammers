@@ -1,30 +1,84 @@
-<form id="dataEntryForm">
-    <fieldset>
-        <legend>Personal Information</legend>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Address Information</legend>
-        <div>
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
-        </div>
-    </fieldset>
-    
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-    
-</form>
+%%html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Site to HPC-ED</title>
+    <style>
+        main {
+            font-family: Georgia, serif;
+            max-width: 700px;
+            margin: auto;
+            background: #7DF9FF;
+            border-radius: 0px;
+        }
+        h1 {
+        
+            text-align: center;
+            color: #333;
+        }
+        form div {
+            margin-bottom: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 0px;
+            color: #333;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 20px solid #7DF9FF;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #FDFDFD;
+            color: black;
+            border: none;
+            border-radius: 0px;
+            cursor: pointer;
+            border: 20px solid #7DF9FF
+        }
+        button:hover {
+            background: #0080FF;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Add Site info to put on HPC-ED Database</h1>
+        <form id="addSiteForm">
+            <div>
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" required>
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                <input type="title" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <input id="description" name="description" rows="2" required></textarea>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="education">Education</option>
+                    <option value="research">Research</option>
+                    <option value="tools">Tools</option>
+                    <option value="social">Social</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </main>
+
+</body>
+</html>
