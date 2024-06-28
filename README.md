@@ -23,7 +23,7 @@ Jackson State Univeristy
 
 Poster Lead
 
-Southern University
+Southern University A & M College
 
 **Jesutofarati Ajala**   
 
