@@ -1,0 +1,21 @@
+import json
+import networkx as nx
+
+# Load the JSON data
+with open('hpced-all.json', 'r') as file:
+    json_data = json.load(file)
+
+# Initialize the graph
+G = nx.Graph()
+
+# Extract and add nodes
+for gmeta in json_data['gmeta']:
+    for entry in gmeta['entries']:
+        if 'content' in entry and isinstance(entry['content'], dict) and 'Title' in entry['content']:
+            node_id = entry['content']['Title']  # Assuming 'Title' is the identifier for nodes
+            G.add_node(node_id, **entry['content'])  # Add node attributes
+
+# Print basic graph information
+print("Number of nodes:", G.number_of_nodes())
+print("Number of edges:", G.number_of_edges())
+print("Graph nodes:", G.nodes(data=True))
