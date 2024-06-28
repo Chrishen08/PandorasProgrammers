@@ -8,19 +8,26 @@ TACC
 
 ### Team members
 **Christian Henry**   
+
 GitHub Lead 
+
 Winston-Salem State University
 
 **Catalina Tovar** 
 Presentation Lead
+
 Jackson State Univeristy
 
 **LeahMonet Morgan**  
+
 Poster Lead
+
 Southern University
 
 **Jesutofarati Ajala**   
+
 Code Lead
+
 University of Southern Mississippi
 
 ## Event Info
